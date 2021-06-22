@@ -22,6 +22,7 @@ const ItemBitcoin = () => {
     setData(data);
     setIsLoading(false);
   };
+  console.log(data);
   useEffect(() => {
     fetchBitcoin();
     return () => {
@@ -32,8 +33,10 @@ const ItemBitcoin = () => {
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-  const filterCoins = data.filter((item) =>
-    item.name.toLowerCase().includes(search.toLowerCase())
+  const filterCoins = data.filter(
+    (item) =>
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
+      item.symbol.toLowerCase().includes(search.toLowerCase())
   );
   if (isLoading) {
     return (
