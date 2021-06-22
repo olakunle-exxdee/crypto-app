@@ -39,6 +39,7 @@ const HistoryChart = ({ data }) => {
           ...historyOPtion,
         },
       });
+      return chartInstance;
     }
   });
 
