@@ -43,39 +43,8 @@ const HistoryChart = ({ data }) => {
     }
   });
 
-  const renderPrice = () => {
-    if (detail) {
-      return (
-        <>
-          <p className="my-0 text-dark">
-            Current-Price: ${detail.current_price.toFixed(2)}
-          </p>
-          <p
-            className={
-              detail.price_change_24h < 0
-                ? "text-danger my-1"
-                : "text-success my-1"
-            }
-          >
-            Price-Change24hrs: {detail.price_change_24h.toFixed(2)}
-          </p>
-          <p
-            className={
-              detail.price_change_percentage_24h < 0
-                ? "text-danger my-0"
-                : "text-success my-0"
-            }
-          >
-            Price-Change%: {detail.price_change_percentage_24h.toFixed(2)}%
-          </p>
-        </>
-      );
-    }
-  };
-
   return (
     <div className="bg-white border mt-2 rounded p-3 ">
-      <div className="">{renderPrice()}</div>
       <div>
         <canvas ref={chartRef} id="myChart" width={250} height={250}></canvas>
       </div>

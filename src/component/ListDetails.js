@@ -79,7 +79,7 @@ const ListDetails = ({ match }) => {
 
   return (
     <div className="container">
-      <Link type="button" className="btn btn-primary btn-lg" to={`/`}>
+      <Link type="button" className="btn btn-primary btn-sm  my-2" to={`/`}>
         Back
       </Link>
       <HistoryChart data={coinData} />
