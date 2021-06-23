@@ -22,7 +22,7 @@ const ItemBitcoin = () => {
     setData(data);
     setIsLoading(false);
   };
-  console.log(data);
+
   useEffect(() => {
     fetchBitcoin();
     return () => {

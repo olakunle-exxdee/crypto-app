@@ -82,6 +82,9 @@ const ListDetails = ({ match }) => {
       <Link type="button" className="btn btn-primary btn-sm  my-2" to={`/`}>
         Back
       </Link>
+      {coinData && coinData.detail && (
+        <h1 className="text-center mb-2">{coinData.detail.name}</h1>
+      )}
       <HistoryChart data={coinData} />
       <CoinData data={coinData.detail} />
     </div>

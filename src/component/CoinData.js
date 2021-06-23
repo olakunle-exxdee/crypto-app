@@ -4,7 +4,7 @@ const CoinData = ({ data }) => {
   const renderData = () => {
     if (data) {
       return (
-        <div className="bg-white text-dark  mt-3 py-2 border row  ">
+        <div className="bg-white text-dark mt-3 py-2 border row ">
           <div className="col-sm">
             <div className="d-flex flex-column">
               <span className=" font-weight-bold coin-data-category my-2">
